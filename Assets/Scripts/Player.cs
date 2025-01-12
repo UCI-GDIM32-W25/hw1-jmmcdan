@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         _numSeedsLeft = _numSeeds;
         _plantCountUI.UpdateSeeds(_numSeeds, _numSeedsPlanted);
     }
-
+    // allows wasd to have the player move
     private void Update()
     {
         if (Input.GetKey((KeyCode.W)))
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
             _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
         }
     }
-
+    //this checks if the player still has seeds, and if they do plants them in the players position
     public void PlantSeed ()
     {
         if(_numSeedsLeft != 0)
